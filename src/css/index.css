@@ -1,0 +1,68 @@
+.placement_container {
+  position: relative;
+}
+
+.placement_element {
+  --anchor-gap: 0px;
+
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  transform: translate(var(--translate-x), var(--translate-y));
+}
+
+.placement_element[data-side="top"] {
+  --top: 0;
+  --translate-y: calc(-100% - var(--anchor-gap));
+}
+
+.placement_element[data-side="bottom"] {
+  --top: 100%;
+  --translate-y: var(--anchor-gap);
+}
+
+.placement_element[data-side="left"] {
+  --left: 0;
+  --translate-x: calc(-100% - var(--anchor-gap));
+}
+
+.placement_element[data-side="right"] {
+  --left: 100%;
+  --translate-x: var(--anchor-gap);
+}
+
+.placement_element[data-side="top"][data-align="start"],
+.placement_element[data-side="bottom"][data-align="start"] {
+  --left: 0;
+  --translate-x: -50%;
+}
+
+.placement_element[data-side="top"][data-align="center"],
+.placement_element[data-side="bottom"][data-align="center"] {
+  --left: 50%;
+  --translate-x: -50%;
+}
+
+.placement_element[data-side="top"][data-align="end"],
+.placement_element[data-side="bottom"][data-align="end"] {
+  --left: 100%;
+  --translate-x: -50%;
+}
+
+.placement_element[data-side="left"][data-align="start"],
+.placement_element[data-side="right"][data-align="start"] {
+  --top: 0;
+  --translate-y: -50%;
+}
+
+.placement_element[data-side="left"][data-align="center"],
+.placement_element[data-side="right"][data-align="center"] {
+  --top: 50%;
+  --translate-y: -50%;
+}
+
+.placement_element[data-side="left"][data-align="end"],
+.placement_element[data-side="right"][data-align="end"] {
+  --top: 100%;
+  --translate-y: -50%;
+}

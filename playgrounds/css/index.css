@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url(./fonts/Inter.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.font-16-32,
+.label {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.font-60-55,
+.tooltip {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 55px;
+  font-weight: 700;
+}
+
+.label {
+  padding: 12px 48px;
+  border: 6px solid black;
+  box-shadow: black 4px 8px;
+  border-radius: 44px;
+  background-color: white;
+}
+
+.tooltip {
+  padding: 32px 50px;
+  border: 6px solid black;
+  box-shadow: black 10px 10px;
+  border-radius: 18px;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #3f46fd;
+}
+
+.container {
+  margin: auto;
+}
